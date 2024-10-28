@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    tools:context=".film1">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="551dp"
+        android:id="@+id/layout_circle"
+        android:background="@drawable/custom_circle" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:gravity="center"
+        android:text="@string/inside_out"
+        android:textColor="@color/bone"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/lkanan">
+
+        <ImageView
+            android:layout_width="176dp"
+            android:layout_height="258dp"
+            android:layout_below="@id/title"
+            android:layout_gravity="center"
+            android:padding="0dp"
+            android:src="@drawable/inside_out"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:layout_marginLeft="23dp"
+        android:layout_toRightOf="@id/lkanan"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="115dp"
+            android:text="@string/SU"
+            android:textColor="@color/bone"
+            android:textSize="25dp" />
+
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="40dp"
+            android:text="@string/sinopsis"
+            android:textColor="@color/bone" />
+
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/sinopsis1"
+            android:textColor="@color/bone"
+            android:textSize="10sp"
+            android:justificationMode="inter_word" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/trailer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/layout_circle"
+        android:layout_margin="20dp"
+        android:gravity="center">
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="300dp"
+            android:layout_height="200dp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signupbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trailer"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="12dp"
+        android:backgroundTint="@color/navblue"
+        android:onClick="launchSettingsMain"
+        android:text="back"
+        android:textSize="18dp" />
+
+</RelativeLayout>
